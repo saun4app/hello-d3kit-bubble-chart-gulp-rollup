@@ -1,0 +1,18 @@
+.good-value {
+    color: DarkGreen;
+}
+
+.ok-value {
+    color: Orange;
+}
+
+body {
+  font: 10px sans-serif;
+}
+
+.x-axis-layer line, .y-axis-layer line,
+.x-axis-layer path, .y-axis-layer path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
