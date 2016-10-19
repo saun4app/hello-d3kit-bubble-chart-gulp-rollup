@@ -1,8 +1,6 @@
 import * as d3 from 'd3';
 
-import {
-    D3KitBubbleChart
-} from './lib/D3KitBubbleChart';
+import { D3KitBubbleChart } from './lib/D3KitBubbleChart';
 
 show_chart();
 

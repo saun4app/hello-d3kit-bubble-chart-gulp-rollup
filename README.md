@@ -51,7 +51,7 @@ View the page on `http://localhost:3020/`
 </a>
 
 #### Credit
-The bubble chart is based on Robert Harris's <a href="https://bl.ocks.org/trebor/ccc5bb7da3fcaa73aa7cbee973d6dcb6" target="_blank">Bubble Chart examle</a>.
+The chart is based on Robert Harris's <a href="https://bl.ocks.org/trebor/ccc5bb7da3fcaa73aa7cbee973d6dcb6" target="_blank">Bubble Chart examle</a>.
 
 #### Resources
 - https://d3js.org

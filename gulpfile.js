@@ -11,8 +11,6 @@ let rollup = require('rollup').rollup;
 ////////
 gulp.task('default', ['build']);
 gulp.task('build', gulp_sequence(['rollup', 'css', 'html'], 'docs'));
-// gulp.task('build', gulp_sequence(['vendor', 'rollup', 'css', 'html'], 'docs'));
-// gulp.task('build', gulp_sequence(['rollup', 'css', 'html'], 'docs'));
 gulp.task('ugly', ['set_ugly', 'build']);
 
 ////////

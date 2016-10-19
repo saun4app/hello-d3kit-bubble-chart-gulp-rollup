@@ -55,7 +55,7 @@ export class D3KitBubbleChart {
     _show_chart() {
         let self = this;
 
-        var _visualize = d3Kit.helper.debounce(function() {
+        var _visualize = d3Kit.helper.debounce(function () {
             if (!(self.skeleton.hasData())) {
                 d3Kit.helper.removeAllChildren(self.d3kit_layers.get('content'));
                 return;
@@ -69,14 +69,14 @@ export class D3KitBubbleChart {
             _show_circle(item_array);
 
             function _update_scale(item_array) {
-                self.d3_x_scale_linear.domain(d3.extent(item_array, function(d) {
-                        return d.x;
-                    }))
+                self.d3_x_scale_linear.domain(d3.extent(item_array, function (d) {
+                    return d.x;
+                }))
                     .range([0, self.skeleton.getInnerWidth()]);
 
-                self.y_scale_linear.domain(d3.extent(item_array, function(d) {
-                        return d.y;
-                    }))
+                self.y_scale_linear.domain(d3.extent(item_array, function (d) {
+                    return d.y;
+                }))
                     .range([self.skeleton.getInnerHeight(), 0]);
             }
 
@@ -98,24 +98,24 @@ export class D3KitBubbleChart {
                 selection.exit().remove();
 
                 selection.enter().append('circle')
-                    .attr('cx', function(d) {
+                    .attr('cx', function (d) {
                         return self.d3_x_scale_linear(d.x);
                     })
-                    .attr('cy', function(d) {
+                    .attr('cy', function (d) {
                         return self.y_scale_linear(d.y);
                     })
                     .on('click', self.d3kit_dispatch.bubbleClick);
 
-                selection.attr('cx', function(d) {
-                        return self.d3_x_scale_linear(d.x);
-                    })
-                    .attr('cy', function(d) {
+                selection.attr('cx', function (d) {
+                    return self.d3_x_scale_linear(d.x);
+                })
+                    .attr('cy', function (d) {
                         return self.y_scale_linear(d.y);
                     })
-                    .attr('r', function(d) {
+                    .attr('r', function (d) {
                         return d.r;
                     })
-                    .style('fill', function(d, i) {
+                    .style('fill', function (d, i) {
                         return self.d3_color_scale(i);
                     });
             }
@@ -127,7 +127,7 @@ export class D3KitBubbleChart {
             .on('resize', _visualize)
             .on('data', _visualize);
 
-        this.skeleton.on('bubbleClick', function(d) {
+        this.skeleton.on('bubbleClick', function (d) {
             // skip
         }).data(self.item_array);
     }
