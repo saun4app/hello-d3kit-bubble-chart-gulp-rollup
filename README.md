@@ -5,7 +5,7 @@
 - `d3kit.js`
 - `es6` (`ES2015`)
 - `rollup.js`
-- `gulp` (**without** `rollup.config.js`)
+- `gulp`
 - `w3css`
 
 #### Example
